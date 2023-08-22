@@ -1,0 +1,11 @@
+Back-end stage:
+App title: Calorie Calculator
+App description: This app will take inputs of users of their weight, height, age and the place where
+they are living in (city and country) to scrape the current temperature information. All of these components will be counted
+and give users the results as their needed calories intake of the present day. (we don't focus on user's data
+so don't need to create a user class to store user's information)
+
+Objects: Calorie: attributes(weight, height, age, weather)
+                          methods(calculating_calories(weight, height, age, weather))
+         Temperature: attributes(city, country)
+                                methods(get_temperature(city, country)
