@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calorie Information Filling Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/siwalikm/quick-form-css@2.2.2/qfc-dark.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="qfc-container">
+  <h2>Calories Calculation Form</h2>
+  <p>Fill in the form and click the button to know how many calories you need today?</p>
+  <p>Let get some more infor about you first.</p>
+   <form action="/infor_page" method="post">
+        {{calorie_form.weight.label}} {{calorie_form.weight}}
+        <br>
+        {{calorie_form.height.label}} {{calorie_form.height}}
+        <br>
+        {{calorie_form.age.label}} {{calorie_form.age}}
+        <hr>
+        <p>Today's weather counts too.</p>
+        <p>Tell us where you are so we can include today's temperature into the calculation.</p>
+        {{calorie_form.city.label}} {{calorie_form.city}}
+        <br>
+        {{calorie_form.country.label}} {{calorie_form.country}}
+        <br>
+        {{calorie_form.submit_button}}
+        {% if result %}
+            <h4>You will need {{calorie_intake}} calories (kCal) today.</h4>
+        {% endif %}
+   </form>
+</div>
+</body>
+</html>
